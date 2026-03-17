@@ -1,4 +1,3 @@
-```markdown
 # Amazon Clone - Free Frontend Practice Project
 
 ![Amazon Clone Screenshot](assets/header1.jpg)
@@ -94,4 +93,3 @@ This project is **free** and open source. You can use, modify, and distribute it
 ---
 
 **Enjoy building and learning!** If you find this project helpful, give it a ⭐ on GitHub.
-```
