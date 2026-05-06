@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
             html += `
                 <div class="cart-page-item">
                     <div class="cart-page-item-img">
-                        <a href="product.html?id=${item.productId || index}">
+                        <a href="product.html?id=${item.productId ?? index}">
                             <img src="${item.img}" alt="${item.name}">
                         </a>
                     </div>
                     <div class="cart-page-item-details">
-                        <a href="product.html?id=${item.productId || index}" class="cart-item-title">${item.name}</a>
+                        <a href="product.html?id=${item.productId ?? index}" class="cart-item-title">${item.name}</a>
                         <p class="cart-item-stock in-stock">In Stock</p>
                         <p class="cart-item-shipping">FREE Shipping on orders over $25</p>
                         <div class="cart-item-actions">

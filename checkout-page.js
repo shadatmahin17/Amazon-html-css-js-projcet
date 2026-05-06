@@ -96,11 +96,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             const name = document.getElementById('ship-name').value;
+            const phone = document.getElementById('ship-phone').value;
             const address = document.getElementById('ship-address').value;
             const city = document.getElementById('ship-city').value;
+            const state = document.getElementById('ship-state').value;
+            const zip = document.getElementById('ship-zip').value;
 
-            if (!name || !address || !city) {
-                alert('Please fill in the shipping address.');
+            if (!name || !phone || !address || !city || !state || !zip) {
+                alert('Please fill in all shipping address fields.');
                 return;
             }
 

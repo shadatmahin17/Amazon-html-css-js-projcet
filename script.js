@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (cartLink) {
         cartLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            openCart();
+            // Navigate to cart page instead of opening side panel
+            window.location.href = 'cart.html';
         });
     }
 
