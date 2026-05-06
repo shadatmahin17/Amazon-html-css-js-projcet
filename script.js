@@ -100,12 +100,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function addToCart(productName, productPrice, productImg) {
+    function addToCart(productName, productPrice, productImg, productId) {
         cart.push({
             id: Date.now(),
+            productId: productId || 0,
             name: productName,
             price: productPrice,
-            img: productImg
+            img: productImg,
+            quantity: 1
         });
         localStorage.setItem('amazonCart', JSON.stringify(cart));
         updateCartBadge();
@@ -139,7 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const price = priceEl ? priceEl.textContent : '0';
             const imgEl = card.querySelector('img');
             const img = imgEl ? imgEl.src : '';
-            addToCart(name, price, img);
+            const productId = card.dataset.id || '0';
+            addToCart(name, price, img, parseInt(productId));
         });
     });
 

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        <a href="index.html">
+            <img src="assets/amazon_logo.png" width="100px" alt="Amazon Logo">
+        </a>
+        <div class="nav-country">
+            <img src="assets/location_icon.png" height="20px" alt="">
+            <div>
+                <p>Deliver to</p>
+                <h1>Bangladesh</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-gategory">
+                <p>All</p>
+                <img src="assets/dropdown_icon.png" height="12px" alt="">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Search Amazon" />
+            <img src="assets/search_icon.png" class="nav-search-icon" alt="Search">
+        </div>
+
+        <div class="nav-language">
+            <img src="assets/us_flag.png" width="25px" alt="">
+            <p>EN</p>
+            <img src="assets/dropdown_icon.png" height="8px" alt="">
+        </div>
+
+        <div class="nav-text">
+            <p class="sign-in-text">Hello, Sign in</p>
+            <h1>Account & Lists <img src="assets/dropdown_icon.png" height="8px" alt=""> </h1>
+        </div>
+
+        <div class="nav-text">
+            <p>Return</p>
+            <h1>& Orders</h1>
+        </div>
+
+        <a href="cart.html" class="nav-cart">
+            <img src="assets/cart_icon.png" width="35px" alt="">
+            <span class="cart-badge">0</span>
+            <p>Cart</p>
+        </a>
+    </nav>
+
+    <div class="nav-bottom">
+        <div>
+            <img src="assets/menu_icon.png" width="25px" alt="">
+            <p>All</p>
+        </div>
+        <p>Today's Deals</p>
+        <p>Customer Service</p>
+        <p>Gift Cards</p>
+        <p>Registry</p>
+        <p>Sell</p>
+    </div>
+
+    <div class="product-page">
+        <div class="product-breadcrumb">
+            <a href="index.html">Home</a> &rsaquo; <span id="product-category">Electronics</span> &rsaquo; <span id="product-breadcrumb-name">Product</span>
+        </div>
+
+        <div class="product-page-main">
+            <div class="product-page-images">
+                <div class="product-thumbnails" id="product-thumbnails">
+                </div>
+                <div class="product-main-image">
+                    <img id="product-main-img" src="assets/product2-1.jpg" alt="Product">
+                </div>
+            </div>
+
+            <div class="product-page-info">
+                <h1 id="product-title">Product Title</h1>
+                <div class="product-rating-section">
+                    <div class="stars" id="product-stars">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                    </div>
+                    <a href="#reviews" id="product-rating-count">1,234 ratings</a>
+                </div>
+                <hr>
+                <div class="product-page-price">
+                    <span class="price-label">Price:</span>
+                    <span class="price-value" id="product-price">$14.49</span>
+                    <span class="price-original" id="product-original-price">$19.99</span>
+                    <span class="price-discount" id="product-discount">27% off</span>
+                </div>
+                <div class="product-page-details">
+                    <h3>About this item</h3>
+                    <ul id="product-features">
+                        <li>High quality materials and construction</li>
+                        <li>Ergonomic design for comfortable use</li>
+                        <li>Compatible with all major devices</li>
+                        <li>Lightweight and portable</li>
+                        <li>1-year manufacturer warranty included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-page-buy">
+                <p class="buy-price" id="buy-price">$14.49</p>
+                <p class="buy-delivery">FREE delivery <strong>Tomorrow</strong></p>
+                <p class="buy-stock in-stock" id="buy-stock">In Stock</p>
+                <div class="buy-quantity">
+                    <label for="qty">Qty:</label>
+                    <select id="qty">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <button class="btn-add-to-cart" id="btn-add-to-cart">Add to Cart</button>
+                <button class="btn-buy-now" id="btn-buy-now">Buy Now</button>
+                <div class="buy-secure">
+                    <p><span>&#128274;</span> Secure transaction</p>
+                </div>
+                <div class="buy-seller">
+                    <p>Ships from: <strong>Amazon</strong></p>
+                    <p>Sold by: <strong>Amazon</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <div class="product-reviews" id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-summary">
+                <div class="reviews-stars-big">
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                    <span class="reviews-avg">4.2 out of 5</span>
+                </div>
+                <p class="reviews-total" id="reviews-total">1,234 global ratings</p>
+            </div>
+            <div class="reviews-list" id="reviews-list">
+            </div>
+            <div class="review-form-section">
+                <h3>Write a Review</h3>
+                <form class="review-form" id="review-form">
+                    <label for="review-name">Your Name</label>
+                    <input type="text" id="review-name" placeholder="Enter your name" required>
+                    <label for="review-rating">Rating</label>
+                    <select id="review-rating" required>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                    <label for="review-text">Your Review</label>
+                    <textarea id="review-text" rows="4" placeholder="Write your review here..." required></textarea>
+                    <button type="submit" class="btn-submit-review">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <img src="assets/amazon_logo.png" width="100px" alt="">
+        <p>&copy;1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">&#8593;</button>
+
+    <script src="product-page.js"></script>
+</body>
+</html>

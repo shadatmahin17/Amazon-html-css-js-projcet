@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Amazon Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="checkout-nav">
+        <a href="index.html">
+            <img src="assets/amazon_logo.png" width="100px" alt="Amazon Logo">
+        </a>
+        <h1 class="checkout-title">Checkout (<span id="checkout-item-count">0</span> items)</h1>
+        <img src="assets/cart_icon.png" width="30px" alt="" class="checkout-lock-icon">
+    </nav>
+
+    <div class="checkout-page">
+        <div class="checkout-main">
+            <div class="checkout-section">
+                <h2>1. Shipping Address</h2>
+                <form id="shipping-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ship-name">Full Name</label>
+                            <input type="text" id="ship-name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ship-phone">Phone Number</label>
+                            <input type="tel" id="ship-phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="ship-address">Address</label>
+                            <input type="text" id="ship-address" placeholder="Street address or P.O. Box" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ship-city">City</label>
+                            <input type="text" id="ship-city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-state">State / Province</label>
+                            <input type="text" id="ship-state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ship-zip">ZIP Code</label>
+                            <input type="text" id="ship-zip" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ship-country">Country</label>
+                            <select id="ship-country">
+                                <option value="BD">Bangladesh</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                                <option value="AU">Australia</option>
+                                <option value="IN">India</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="checkout-section">
+                <h2>2. Payment Method</h2>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span>Credit or Debit Card</span>
+                    </label>
+                    <div class="card-form" id="card-form">
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-expiry">Expiry</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvv">CVV</label>
+                                <input type="text" id="card-cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cod">
+                        <span>Cash on Delivery</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="bkash">
+                        <span>bKash / Mobile Banking</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h2>3. Review Items</h2>
+                <div class="checkout-items" id="checkout-items">
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-sidebar">
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Items:</span>
+                    <span id="summary-items">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="summary-shipping">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax:</span>
+                    <span id="summary-tax">$0.00</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Order Total:</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+                <button class="btn-place-order" id="btn-place-order">Place Your Order</button>
+                <p class="order-disclaimer">By placing your order, you agree to Amazon's privacy notice and conditions of use.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-confirmation-overlay" id="order-confirmation-overlay">
+        <div class="order-confirmation-modal">
+            <div class="order-success-icon">&#10003;</div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your purchase.</p>
+            <p class="order-number">Order #<span id="order-number">000000</span></p>
+            <p>You will receive a confirmation email shortly.</p>
+            <a href="index.html" class="btn-continue-shopping">Continue Shopping</a>
+        </div>
+    </div>
+
+    <footer>
+        <img src="assets/amazon_logo.png" width="100px" alt="">
+        <p>&copy;1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+
+    <script src="checkout-page.js"></script>
+</body>
+</html>
